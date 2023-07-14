@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;1,300&family=Raleway:wght@500&family=Source+Code+Pro:ital,wght@0,300;1,300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("../img/background-image.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#board {
+  background: linear-gradient(cyan, rgba(14, 202, 99, 0.273));
+  width: 90vmin;
+  height: 92vmin;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: repeat(18, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+}
+
+.score {
+  position: absolute;
+  top: 9px;
+  right: 150px;
+  width: 250px;
+  background: linear-gradient(#f2f2f2, rgb(127, 233, 228));
+  border: 1px solid #ccc;
+}
+
+#scoreBox {
+  display: block;
+  font-size: 39px;
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#HighScoreBox {
+  display: block;
+  font-size: 39px;
+  font-weight: bold;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.snake {
+  background-color: purple;
+  border: .25vmin solid white;
+  border-radius: 12px;
+}
+
+.head {
+  background: linear-gradient(rgb(220, 161, 171), white);
+  border: 2px solid black;
+  transform: scale(1.02);
+  border-radius: 9px;
+}
+
+.food {
+  background: linear-gradient(yellow, red);
+  border: .25vmin solid black;
+  border-radius: 8px;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 50px;
+  right: 150px;
+  width: 200px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+}
+
+.btn-box button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-box button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Adjustments for Tablets */
+
+@media screen and (max-width: 1024px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  #board {
+    width: 80vmin;
+    height: 82vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #scoreBox,
+  #HighScoreBox {
+    right: 20px;
+  }
+
+  .btn-box {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+
+/* Responsive Adjustments for Phones */
+
+@media screen and (max-width: 480px) {
+  body {
+    justify-content: flex-start;
+  }
+
+  #board {
+    width: 90vmin;
+    height: 92vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #scoreBox,
+  #HighScoreBox {
+    top: 20px;
+    right: 20px;
+  }
+
+  .btn-box {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
